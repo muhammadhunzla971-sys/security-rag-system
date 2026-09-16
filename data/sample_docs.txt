@@ -1,0 +1,9 @@
+CVE-2024-1234 is a critical SQL injection vulnerability found in web applications that improperly sanitize user input in login forms. Attackers can exploit this by injecting malicious SQL commands through input fields, potentially gaining unauthorized access to the database. The fix involves using parameterized queries instead of string concatenation when building SQL statements.
+
+Cross-Site Scripting (XSS) is a vulnerability where attackers inject malicious scripts into web pages viewed by other users. There are three main types: stored XSS, reflected XSS, and DOM-based XSS. Prevention involves proper output encoding and Content Security Policy headers.
+
+A buffer overflow occurs when a program writes more data to a buffer than it can hold, causing adjacent memory to be overwritten. This can lead to crashes or allow attackers to execute arbitrary code. Modern defenses include stack canaries, ASLR (Address Space Layout Randomization), and using memory-safe programming languages.
+
+Ransomware is malicious software that encrypts a victim's files and demands payment for the decryption key. Common infection vectors include phishing emails, malicious attachments, and exploiting unpatched vulnerabilities. Organizations should maintain regular offline backups and keep systems patched.
+
+Zero-day vulnerabilities are security flaws unknown to the software vendor, giving defenders zero days to prepare a fix before potential exploitation. These are highly valuable to attackers and are often sold on underground markets. Detection relies on behavior-based monitoring rather than signature-based methods.
