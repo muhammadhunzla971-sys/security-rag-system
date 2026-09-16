@@ -26,8 +26,12 @@ class RAGPipeline:
         self.vectorstore = Chroma.from_documents(chunks, self.embeddings, persist_directory="chroma_db")
 
         # Redis connection
-        import os
-        self.redis_client = redis.Redis(host=os.getenv("REDIS_HOST", "localhost"), port=6379, decode_responses=True)
+        self.redis_client = redis.Redis(
+            host=os.getenv("REDIS_HOST", "localhost"),
+            port=int(os.getenv("REDIS_PORT", 6379)),
+            password=os.getenv("REDIS_PASSWORD", None),
+            decode_responses=True
+        )
         print("✅ RAG pipeline ready")
 
     def _cache_key(self, query: str) -> str:
